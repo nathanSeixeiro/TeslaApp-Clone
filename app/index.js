@@ -1,3 +1,4 @@
+import { FlatList } from "react-native-gesture-handler";
 import { StyleSheet, Text, View, Image } from "react-native";
 import {
   FontAwesome,
@@ -10,7 +11,7 @@ import {
 
 import car from "../assets/images/car.png";
 import menuOptions from "../assets/menuOptions";
-import { FlatList } from "react-native-gesture-handler";
+import MenuOption from "../components/MenuOption";
 
 export default function Page() {
   return (
@@ -35,22 +36,7 @@ export default function Page() {
       <FlatList
         data={menuOptions}
         showsVerticalScrollIndicator={false}
-        renderItem={({ item }) => (
-          <View style={styles.optionRow}>
-            <MaterialCommunityIcons
-              name={item.iconName}
-              size={26}
-              color="gray"
-            />
-            <Text style={styles.optionText}>{item.name}</Text>
-            <MaterialIcons
-              name="keyboard-arrow-right"
-              size={24}
-              color="gray"
-              style={{ marginLeft: "auto" }}
-            />
-          </View>
-        )}
+        renderItem={MenuOption}
       />
     </View>
   );
