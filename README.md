@@ -1,12 +1,9 @@
 # Tesla App Interface
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+- Recriando interface do app da tesla
+-- HomeScreen
+-- ClimateScreen
 
-## 🚀 How to use
-
-```sh
-npx create-react-native-app -t with-router
-```
 
 ## 📝 Notes
 
